@@ -1,0 +1,285 @@
+/* Temel İçe Aktarmalar */
+@import url('base.css');
+@import url('header.css');
+@import url('hero.css');
+@import url('services.css');
+@import url('about.css');
+@import url('appointment.css');
+@import url('contact.css');
+@import url('footer.css');
+@import url('utilities.css');
+@import url('appointment-info.css');
+/* Font Awesome için */
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css');
+
+/* ===== TAKVİM GÜNLERİ ===== */
+.calendar-day {
+    padding: 10px;
+    text-align: center;
+    border-radius: 5px;
+    margin: 2px;
+    transition: all 0.3s;
+}
+
+/* Pasif günler (geçmiş) */
+.calendar-day.disabled {
+    background-color: #f0f0f0;
+    color: #ccc;
+    cursor: not-allowed;
+}
+
+/* Tamamen dolu günler */
+.calendar-day.fully-booked {
+    background-color: #ffdddd;
+    color: #d32f2f;
+    cursor: not-allowed;
+    border: 1px solid #ff9999;
+}
+
+/* Kısmen dolu günler */
+.calendar-day.partially-booked {
+    background-color: #fff8e1;
+    color: #ff8f00;
+    border: 1px solid #ffcc80;
+}
+
+/* Boş günler */
+.calendar-day.available {
+    background-color: #e8f5e9;
+    color: #2e7d32;
+    cursor: pointer;
+    border: 1px solid #a5d6a7;
+}
+
+/* Seçili gün */
+.calendar-day.selected {
+    background-color: #2196f3;
+    color: white;
+    font-weight: bold;
+}
+
+/* ===== SAAT ARALIKLARI ===== */
+.time-slot {
+    padding: 8px 12px;
+    margin: 5px;
+    border-radius: 4px;
+    text-align: center;
+}
+
+/* Dolu saatler */
+.time-slot.booked {
+    background-color: #ffebee;
+    color: #c62828;
+    cursor: not-allowed;
+    text-decoration: line-through;
+}
+
+/* Boş saatler */
+.time-slot.available {
+    background-color: #e8f5e9;
+    color: #2e7d32;
+    cursor: pointer;
+    border: 1px solid #81c784;
+}
+
+/* Seçili saat */
+.time-slot.selected {
+    background-color: #2196f3;
+    color: white;
+    font-weight: bold;
+}
+
+.time-slots {
+    margin: 20px 0;
+}
+
+.time-select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: white;
+    cursor: pointer;
+}
+
+.time-select option {
+    padding: 8px;
+}
+
+.time-select option:disabled {
+    color: #999;
+    cursor: not-allowed;
+}
+
+
+/* Randevu saat seçimi için özel stiller */
+#app-time option:disabled {
+    color: #e74c3c;
+    font-style: italic;
+    background-color: #ffebee;
+}
+
+#app-time option {
+    padding: 8px;
+    background-color: #e8f5e9;
+}
+
+#app-time option:hover {
+    background-color: #c8e6c9;
+}
+
+
+
+.time-slots {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 sütunlu grid */
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.time-slot {
+    padding: 10px;
+    text-align: center;
+    background: #ecf0f1;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.time-slot.available:hover {
+    background: #bdc3c7;
+}
+
+.time-slot.selected {
+    background: #3498db;
+    color: white;
+    font-weight: bold;
+}
+
+.time-slot.booked {
+    background: #e74c3c;
+    color: white;
+    cursor: not-allowed;
+    text-decoration: line-through;
+}
+
+
+/* Dolu saatler için stil */
+#app-time option:disabled {
+  color: #e74c3c;
+  background-color: #ffebee;
+  font-style: italic;
+}
+
+/* Normal saatler için stil */
+#app-time option {
+  color: #2e7d32;
+  background-color: #e8f5e9;
+}
+
+/* Select box genel stili */
+#app-time {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 1rem;
+  margin-bottom: 15px;
+  background-color: white;
+  cursor: pointer;
+}
+
+/* -------------------------------------------------------------------------------------------*/
+/* ===== TAKVİM GÜN DURUM STİLLERİ ===== */
+
+.calendar-day {
+    padding: 10px;
+    text-align: center;
+    border-radius: 5px;
+    margin: 2px;
+    transition: all 0.3s;
+}
+.calendar-day {
+    position: relative;
+    min-height: 60px;
+    padding: 5px;
+    border: 1px solid #ddd;
+    cursor: pointer;
+}
+
+.day-number {
+    font-weight: bold;
+    display: block;
+}
+
+.day-status {
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    font-size: 0.7rem;
+    background-color: #ff6b6b;
+    color: white;
+    padding: 2px 5px;
+    border-radius: 3px;
+}
+
+.calendar-day.booked .day-status {
+    background-color: #ff6b6b;
+}
+
+/* Dolu saatler listesi */
+#appointments-list {
+    margin-top: 15px;
+    padding: 15px;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    border: 1px solid #eee;
+}
+
+#appointments-list h4 {
+    margin-bottom: 10px;
+    color: #333;
+    font-size: 1rem;
+}
+
+.booked-times {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 10px;
+}
+
+.time-badge {
+    background-color: #ff6b6b;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 0.85rem;
+    display: inline-block;
+}
+
+/* Dolu saatler için select box özelleştirmesi */
+#app-time option:disabled {
+    color: #e74c3c;
+    background-color: #ffebee;
+    font-style: italic;
+}
+
+/* Responsive ayarlar */
+@media (max-width: 768px) {
+    .calendar-day {
+        min-height: 50px;
+        font-size: 0.9rem;
+    }
+    
+    .day-status {
+        font-size: 0.6rem;
+        padding: 1px 3px;
+    }
+    
+    .time-badge {
+        padding: 3px 6px;
+        font-size: 0.8rem;
+    }
+}

@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uzman Fizyoterapist | Fizik Tedavi ve Rehabilitasyon</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <div class="logo">fzt.&nbsp<span>Ahmet Mehmet</span></div>
+            <nav>
+                <ul>
+                    <li><a href="#" onclick="showSection('anasayfa')">Anasayfa</a></li>
+                    <li><a href="#" onclick="showSection('hizmetler')">Hizmetler</a></li>
+                    <li><a href="#" onclick="showSection('hakkimizda')">Hakkımızda</a></li>
+                    <li><a href="#" onclick="showSection('randevu')">Randevu</a></li>
+                    <li><a href="#" onclick="showSection('iletisim')">İletişim</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Bölümü -->
+    <section class="hero active-section" id="anasayfa">
+        <div class="container">
+            <h1>Profesyonel Fizyoterapi Hizmetleri</h1>
+            <p>Uzman fizyoterapistlerimizle sağlıklı bir yaşam için doğru adımlar atın. Ağrılarınızdan kurtulun, hareket
+                özgürlüğünüze kavuşun.</p>
+        </div>
+    </section>
+
+    <!-- Hizmetler -->
+    <section class="services" id="hizmetler">
+        <div class="container">
+            <div class="section-title">
+                <h2>Hizmetlerimiz</h2>
+            </div>
+            <div class="services-wrapper">
+                <button class="scroll-btn left" onclick="scrollServices(-1)">❮</button>
+                <div class="services-container">
+                    <div class="service-card">
+                        <div class="service-img">
+                            <img src="https://images.unsplash.com/photo-1545205597-3d9d02c29597?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+                                alt="Manuel Terapi">
+                        </div>
+                        <div class="service-content">
+                            <h3>Manuel Terapi</h3>
+                            <p>Uzman ellerle uygulanan özel tekniklerle ağrılarınızdan kurtulun ve hareket
+                                kabiliyetinizi artırın.</p>
+                        </div>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="service-img">
+                            <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+                                alt="Spor Yaralanmaları">
+                        </div>
+                        <div class="service-content">
+                            <h3>Spor Yaralanmaları</h3>
+                            <p>Spor yaralanmalarında uzman fizyoterapistlerimizle hızlı iyileşme sağlayın.</p>
+                        </div>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="service-img">
+                            <img src="https://images.unsplash.com/photo-1538805060514-97d9cc17730c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+                                alt="Postür Analizi">
+                        </div>
+                        <div class="service-content">
+                            <h3>Postür Analizi</h3>
+                            <p>Doğru duruş teknikleriyle ağrılarınızdan kurtulun ve yaşam kalitenizi artırın.</p>
+                        </div>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="service-img">
+                            <img src="https://guliskavadar.com/wp-content/uploads/2018/10/kinezyolojik-bantlama-agri-bandi-1.jpg"
+                                alt="Kinezyolojik Bantlama">
+                        </div>
+                        <div class="service-content">
+                            <h3>Kinezyolojik Bantlama</h3>
+                            <p>Özel bantlama teknikleriyle ağrı kontrolü ve performans artışı sağlayın.</p>
+                        </div>
+                    </div>
+                </div>
+                <button class="scroll-btn right" onclick="scrollServices(1)">❯</button>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Hakkımızda -->
+    <section class="about" id="hakkimizda">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2>Uzman Fizyoterapist Ahmet</h2>
+                    <p>15 yılı aşkın deneyimimizle fizyoterapi ve rehabilitasyon alanında uzman ekibimizle hizmet
+                        veriyoruz. Amacımız, her hasta için kişiye özel tedavi planları oluşturarak maksimum iyileşme
+                        sağlamaktır.</p>
+                    <p>Güncel bilimsel yöntemleri kullanarak, hasta memnuniyetini ön planda tutarak çalışıyoruz.
+                        Merkezimizde son teknoloji ekipmanlar ve modern tedavi yöntemleri bulunmaktadır.</p>
+                    <a href="#" onclick="showSection('iletisim')" class="btn">İletişime Geçin</a>
+                </div>
+                <div class="about-img">
+                    <img src="https://images.unsplash.com/photo-1551601651-bc60f254d532?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+                        alt="Fizyoterapist Ekibi">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Randevu -->
+    <section class="appointment" id="randevu">
+        <div class="container">
+            <div class="section-title">
+                <h2>Randevu Al</h2>
+                <p>Uzman fizyoterapistlerimizle görüşmek için uygun bir tarih ve saat seçin</p>
+            </div>
+
+            <div class="appointment-container">
+                <!-- Takvim -->
+                <div class="calendar-container">
+                    <div class="calendar-header">
+                        <button id="prev-month">❮</button>
+                        <h3 id="current-month">Mayıs 2025</h3>
+                        <button id="next-month">❯</button>
+                    </div>
+                    <div class="calendar-grid" id="calendar">
+                        <!-- JavaScript ile dinamik olarak oluşturulacak -->
+                    </div>
+                </div>
+
+                <!-- Randevu Formu -->
+                <div class="appointment-form-container">
+                    <h3 id="selected-date" style="color: black;">Tarih Seçin</h3>
+
+                    <div class="appointment-form" id="appointment-form">
+                        <h3>Randevu Bilgileri</h3>
+                        <div class="form-group">
+                            <input type="text" id="app-name" placeholder="Ad Soyad" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="app-email" placeholder="E-posta" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" id="app-phone" placeholder="Telefon" required>
+                        </div>
+                        <div class="form-group">
+                            <select id="app-time" required>
+                                <option value="" disabled selected>Saat Seçiniz</option>
+                                <!-- Saat aralıkları JavaScript ile dinamik olarak eklenecek -->
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="app-notes" placeholder="Ek Notlar"></textarea>
+                        </div>
+                        <button id="request-appointment" class="btn">Randevu Talebi Gönder</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- İletişim -->
+    <section class="contact" id="iletisim">
+        <div class="container">
+            <div class="section-title">
+                <h2>İletişim</h2>
+            </div>
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <h3>İletişim Bilgileri</h3>
+                    <p><strong>Adres:</strong> Örnek Mahallesi, Fizyoterapi Sokak No:15, İstanbul</p>
+                    <p><strong>Telefon:</strong> 0555 555 55 55</p>
+                    <p><strong>E-posta:</strong> info@fizyocare.com</p>
+                    <p><strong>Çalışma Saatleri:</strong> Pazartesi-Cumartesi 09:00-19:00</p>
+                </div>
+                <div class="contact-form">
+                    <h3>Bize Ulaşın</h3>
+                    <form>
+                        <input type="text" placeholder="Adınız Soyadınız" required>
+                        <input type="email" placeholder="E-posta Adresiniz" required>
+                        <input type="tel" placeholder="Telefon Numaranız">
+                        <textarea placeholder="Mesajınız" required></textarea>
+                        <button type="submit" class="btn">Gönder</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Adres</h3>
+                    <p>Örnek Mahallesi, Fizyoterapi Sokak No:15, İstanbul</p>
+                </div>
+                <div class="footer-section">
+                    <h3>İletişim</h3>
+                    <p>0555 555 55 55</p> <br>
+                    <p>info@fizyotereapia.com</p>
+                </div>
+                <div class="footer-section" style="text-align: center;">
+                    <h3>Sosyal Medya</h3>
+                    <div class="social-icons"
+                        style="margin: 15px 0; display: flex; justify-content: center; gap: 20px;">
+                        <!-- Instagram -->
+                        <div style="display: flex; flex-direction: column; align-items: center;">
+                            <a href="https://www.instagram.com/fizyodeneme/" target="_blank"
+                                style="text-decoration: none;">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Instagram_icon.png/2048px-Instagram_icon.png"
+                                    alt="Instagram" style="width: 30px; height: 30px;">
+                            </a>
+                            <span style="color: #ecf0f1; margin-top: 5px; font-size: 0.9rem;">@fizyoden</span>
+                        </div>
+                        <!-- WhatsApp -->
+                        <div style="display: flex; flex-direction: column; align-items: center;">
+                            <a href="https://wa.me/905555555555?text=Merhaba,%20randevu%20almak%20istiyorum."
+                                target="_blank" style="text-decoration: none;">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/WhatsApp.svg/2048px-WhatsApp.svg.png"
+                                    alt="WhatsApp" style="width: 30px; height: 30px;">
+                            </a>
+                            <span style="color: #ecf0f1; margin-top: 5px; font-size: 0.9rem;">0555 555 55 55</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 fzt fizyoden. Tüm hakları saklıdır.</p>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>

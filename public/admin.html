@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <title>Randevu Yönetim Paneli</title>
+  <link rel="stylesheet" href="../css/admin.css">
+</head>
+<body>
+  <h1>Randevu Yönetim Paneli</h1>
+
+  <div class="calendar-header">
+    <button id="prev-month">◄ Önceki Ay</button>
+    <span id="current-month">Mayıs 2025</span>
+    <button id="next-month">Sonraki Ay ►</button>
+  </div>
+
+  <button class="refresh-btn" onclick="refreshAppointments()">
+    ↻ Randevuları Yenile
+  </button>
+
+  <div class="calendar" id="calendar"></div>
+
+  <h2>Seçili Gün: <span id="selected-date" class="current-date">-</span></h2>
+
+  <table id="appointments-table">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Saat</th>
+        <th>Ad Soyad</th>
+        <th>Telefon</th>
+        <th>E-posta</th>
+        <th>Talep Zamanı</th>
+        <th>İşlemler</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+
+  <!-- Randevu Düzenleme Modalı -->
+  <div id="editModal" class="modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3>Randevu Saatini Düzenle</h3>
+        <button class="close-btn" onclick="closeModal()">&times;</button>
+      </div>
+      <div>
+        <p>Mevcut saat: <strong id="current-time"></strong></p>
+        <div class="time-select-container">
+          <label for="time-select">Yeni saat seçin:</label>
+          <select id="time-select">
+            <!-- Saatler JavaScript ile eklenecek -->
+          </select>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button onclick="closeModal()" class="delete-btn">İptal</button>
+        <button id="save-time-btn" class="edit-btn">Kaydet</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="admin-script.js"></script>
+</body>
+</html>
