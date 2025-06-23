@@ -19,7 +19,7 @@ MongoDB kullanarak gerçek zamanlı randevu doğrulamasıyla verimli randevu yö
 - **Frontend**: HTML, CSS, JavaScript
 - **Dosya Yapısı**:
   - `public/css/` – Stil dosyaları
-  - `public/js/` – JavaScript dosyaları
+  - `public/js/` – JavaScript ve html dosyaları
   - `public/img/` – Görseller
   - `public/index.html`
 - **Backend / API**: Node.js (Express) & Python (`smtplib` ile e‑posta gönderimi)
